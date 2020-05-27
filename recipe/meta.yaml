@@ -1,5 +1,5 @@
 {% set name = "cymove" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ozars/cymove/archive/v{{ version }}.tar.gz
-  sha256: e57dd01e2ec0e226dc8fec9b1bdcfea6b76875d12a4a44946de3eb329f25b5f2
+  sha256: bfc34c0d191154a4c76c878739edb525049e8aa5d1986b80a5bb651d894d2d00
 
 build:
   number: 0
