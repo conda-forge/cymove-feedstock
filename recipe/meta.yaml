@@ -11,16 +11,16 @@ source:
   sha256: e57dd01e2ec0e226dc8fec9b1bdcfea6b76875d12a4a44946de3eb329f25b5f2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
     - cython
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/cymove/
